@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+:root{
+  /* light mode colors */
+  --primary-bg: white;
+  --secondary-bg: #f9f9f9;
+  --txt-color: #363636;
+  --footer-bg: white;
+  --footer-txt: #363636;
+}
+.darkmode{
+  /* dark mode colors */
+  --primary-bg: #181A1B;
+  --secondary-bg: #1B1E1F;
+  --txt-color: #C6C1B9;
+  --footer-bg: black;
+  --footer-txt: white;
+}
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto';
+  color: var(--txt-color);
+}
+/* navbar */
+nav{
+  background-color: var(--secondary-bg);
+  display: flex;
+  gap: 50px;
+  padding: 20px 100px;
+  align-items: center;
+  justify-content: end;
+  position:absolute;
+  right:0;
+}
+nav a{
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 20px;
+}
+nav button{
+  border:none;
+  background-color: transparent;
+}
+nav svg:hover{
+  fill: grey;
+  cursor: pointer;
+}
+/* HOME */
+section{
+  height: 100vh;
+}
+section:nth-child(2n-1){
+  background-color: var(--secondary-bg);
+}
+section:nth-child(2n){
+  background-color: var(--primary-bg);
+}
+/* SECTION1 */
+#s1{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#s1 .box{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+#s1 .box .content{
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+#s1 .box .content h1{
+  margin-bottom: 100px;
+  font-size: 40px;
+}
+#s1 .box .content p{
+  margin-bottom: auto;
+  line-height: 25px;
+}
+#s1 .box .content a{
+  font-weight: bold;
+  font-size: 20px;
+}
+.profileImg{
+  clip-path: circle();
+  height: 400px;
+  width: 400px;
+  object-fit: cover;
+  overflow: hidden;
+}
+/* SECTION2 */
+#s2{
+  padding: 0 100px;
+}
+#s2 .content{
+  max-width: 350px;
+  margin:auto;
+}
+
+/* footer */
+footer{
+  background-color: var(--footer-bg);
+}
+footer p, a, h1, h4{
+  color: var(--footer-txt);
+  text-decoration: none;
+}
+/* footer top */
+footer .top{
+  display: flex;
+  flex-direction: column;
+  padding: 30px 150px;
+}
+.contact{
+  margin-top: 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.contact .links{
+  max-width: 160px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 13px;
+}
+/* footer bot */
+footer .bot{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  height: 100px;
+}
+img{
+  width: 25px;
+}
