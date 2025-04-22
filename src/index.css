@@ -6,6 +6,8 @@
   --txt-color: #363636;
   --footer-bg: white;
   --footer-txt: #363636;
+
+  --selection-nav: black; /* navbar text selection color*/
 }
 .darkmode{
   /* dark mode colors */
@@ -14,6 +16,8 @@
   --txt-color: #C6C1B9;
   --footer-bg: black;
   --footer-txt: white;
+
+  --selection-nav: white; /* navbar text selection color*/
 }
 *{
   padding: 0;
@@ -24,19 +28,35 @@
 }
 /* navbar */
 nav{
-  background-color: var(--secondary-bg);
   display: flex;
   gap: 50px;
   padding: 20px 100px;
   align-items: center;
   justify-content: end;
   position:absolute;
+  top: 0;
   right:0;
 }
 nav a{
   font-weight: bold;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 16px;
+}
+nav span.active{
+  color: var(--selection-nav);
+  display: inline-block;
+  position: relative;
+}
+/* from stack overflow, dot under text */
+nav span.active::before{
+  content: '.';
+  display: inline-block;
+  position:absolute;
+  bottom: -0.5em;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  font-size: 40px;
 }
 nav button{
   border:none;
@@ -50,40 +70,27 @@ nav svg:hover{
 section{
   height: 100vh;
 }
+section .box{
+  max-width: 1300px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/* home section color */
 section:nth-child(2n-1){
   background-color: var(--secondary-bg);
 }
 section:nth-child(2n){
   background-color: var(--primary-bg);
 }
-/* SECTION1 */
-#s1{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* about section color */
+.about section:nth-child(2n-1){
+  background-color: var(--primary-bg);
 }
-#s1 .box{
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-}
-#s1 .box .content{
-  max-width: 350px;
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-}
-#s1 .box .content h1{
-  margin-bottom: 100px;
-  font-size: 40px;
-}
-#s1 .box .content p{
-  margin-bottom: auto;
-  line-height: 25px;
-}
-#s1 .box .content a{
-  font-weight: bold;
-  font-size: 20px;
+.about section:nth-child(2n){
+  background-color: var(--secondary-bg);
 }
 .profileImg{
   clip-path: circle();
@@ -92,21 +99,58 @@ section:nth-child(2n){
   object-fit: cover;
   overflow: hidden;
 }
-/* SECTION2 */
-#s2{
-  padding: 0 100px;
+/* about section */
+section .ab-box{
+  max-width: 1300px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
-#s2 .content{
-  max-width: 350px;
-  margin:auto;
+
+/* contact page */
+/* trying grid */
+.contact-page{
+  height: 85vh;
+  display: grid;
+  place-items: center;
+  background-color: var(--primary-bg);
+}
+.contact-page .box{
+  width: 55vw;
+  display: grid;
+  grid-template-rows: 50px 70px 300px
+}
+form{
+  align-self: end;
+  display: flex;
+  flex-direction: column;
+}
+.contact-page form button{
+  align-self: end;
+}
+input{
+  margin: 10px 0;
+  padding: 10px;
+  border: none;
+  box-shadow: 0 1px 0px var(--txt-color);
+  background-color: var(--primary-bg);
+}
+.contact-page button{
+  border: none;
+  background-color: transparent;
+
 }
 
 /* footer */
 footer{
-  background-color: var(--footer-bg);
+  /* background-color: var(--footer-bg); */
+  background-color: black;
 }
-footer p, a, h1, h4{
-  color: var(--footer-txt);
+footer p, footer a, footer h1, footer h4{
+  /* color: var(--footer-txt); */
+  color: white;
   text-decoration: none;
 }
 /* footer top */
@@ -138,4 +182,29 @@ footer .bot{
 }
 img{
   width: 25px;
+}
+
+/* about section list, testing grid display */
+.about-list{
+  display: grid;
+  /* looks better with repeat(2, 45px or 1fr) but with this for now  */
+  /* also dont know how to 7 items per row while having dynamic item counts */
+  grid-template-rows: repeat(2, 45px);
+  grid-auto-flow: column;
+  grid-auto-rows: 1fr;
+}
+/* could make it into marquee l8tr */
+.about-mid{
+  position:relative;
+  width: 140vw;
+  padding: 40px 0;
+  overflow: hidden;
+}
+.about-mid h1{
+  color: black;
+  /* text stroke, just text shadow the 4 corner... cuz the webkit one is shit */
+  text-shadow: -1px -1px 0 #C6C1B9, 1px -1px 0 #C6C1B9, -1px 1px 0 #C6C1B9, 1px 1px 0 #C6C1B9;
+  font-size: 100px;
+  position:absolute;
+  left: -100px;
 }

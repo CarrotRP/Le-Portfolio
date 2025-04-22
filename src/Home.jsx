@@ -1,25 +1,17 @@
+import Section from './Section';
+
 import profileImg from './assets/carrot.jpg'
 
 function Home() {
     return (
+        //TODO: add scroll to top
         <div className="home">
-            <section id="s1">
-                <div className="box">
-                    <div className="content">
-                        <h1>Hi, I am Carrot, Software Engineer</h1>
-                        <p>A software engineering student with a love for technologies and desire to solve problems.</p>
-                        <a href="#">Download CV</a>
-                    </div>
-                    <img src={profileImg} alt="profile" className='profileImg' />
-                </div>
-            </section>
-            <section id="s2">
-                <h1>About Me</h1>
-                <div className="content">
-                    <p>skills</p>
-                    <p>skills</p>
-                </div>
-            </section>
+            {/* use a list, map function later if i have mo work/proj */}
+            {/* section has 5 props, h(height), txt(h1), txt2(p), txt3(a), link, img, (idk why i use this layout but if it works, it works lol*/}
+            <Section txt="Hi, I am Carrot, Software Engineer" txt2="A software engineering student with a love for technologies and desire to solve problems." txt3="Download CV &#10230;" image={profileImg} />
+            <Section h={60} txt="Crafted with love. I guess..." txt2="These are some selection of my works"/>
+            <Section h={35} txt="Amiibo Mobile App" txt3="VIEW PROJECT &#10230;" link="https://github.com/CarrotRP/amiibo_api_flutter.git"/>
+            <Section h={35} txt="I have no other work or do I?" txt2="actually, no i don't lol"/>
         </div>
     );
 }
