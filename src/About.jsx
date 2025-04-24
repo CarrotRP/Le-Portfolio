@@ -14,7 +14,7 @@ function About(){
     const pLang = ["C++", "Java", "MySQL", "Python", ]
 
     return(
-        <div className="about">
+        <div className="about" style={{overflow: "hidden"}}>
             {/* some basic info section */}
             <AboutSection/>
             {/* middle part stuff */}

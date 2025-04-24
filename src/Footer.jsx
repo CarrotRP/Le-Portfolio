@@ -45,7 +45,7 @@ function Footer(props) {
             </div>}
             <div className="bot" style={location.pathname == "/contact" ? in_contact_page_style : footerBot_style}>
                 <p style={location.pathname == "/contact" ? in_contact_p_style : footerBot_p_style}>&copy; CarrotS {new Date().getFullYear()}</p>
-                <p>|</p>
+                <p style={location.pathname == "/contact" ? in_contact_p_style : footerBot_p_style}>|</p>
                 {/* testing a tag and Link from react-router */}
                 {/* <img src="" alt="facebook" /> */}
                 <a href="https://github.com/CarrotRP" target="_blank">

@@ -8,9 +8,14 @@
   --footer-txt: #363636;
 
   --selection-nav: black; /* navbar text selection color*/
+  --work-page: #C6C6C6;
+
+  --placeholder: #c6c6c6;
 }
 .darkmode{
   /* dark mode colors */
+  -webkit-transition: background-color 1s;
+  transition: background-color 0.5;
   --primary-bg: #181A1B;
   --secondary-bg: #1B1E1F;
   --txt-color: #C6C1B9;
@@ -18,6 +23,9 @@
   --footer-txt: white;
 
   --selection-nav: white; /* navbar text selection color*/
+  --work-page: #363636;
+  
+  --placeholder: #a1a1a1;
 }
 *{
   padding: 0;
@@ -120,7 +128,7 @@ section .ab-box{
 .contact-page .box{
   width: 55vw;
   display: grid;
-  grid-template-rows: 50px 70px 300px
+  grid-template-rows: 80px 70px 390px
 }
 form{
   align-self: end;
@@ -130,26 +138,43 @@ form{
 .contact-page form button{
   align-self: end;
 }
-input{
-  margin: 10px 0;
-  padding: 10px;
+input, textarea{
+  margin: 4px 0;
+  padding: 15px 10px;
   border: none;
-  box-shadow: 0 1px 0px var(--txt-color);
   background-color: var(--primary-bg);
+  box-shadow: 0 1px 0px var(--placeholder);
+  font-weight: 500; 
+}
+.contact-page ::placeholder{
+  color: var(--placeholder);
+}
+textarea{
+  resize: none;
+  width: 100%;
 }
 .contact-page button{
   border: none;
   background-color: transparent;
-
+  font-weight: 700;
+  font-size: 14px;
+}
+/* contact-page text area max length indicator */
+.contact-page .txt-area p{
+  /* font-family: 'Roboto'; */
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--placeholder);
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
 }
 
 /* footer */
 footer{
-  /* background-color: var(--footer-bg); */
   background-color: black;
 }
 footer p, footer a, footer h1, footer h4{
-  /* color: var(--footer-txt); */
   color: white;
   text-decoration: none;
 }
@@ -208,3 +233,22 @@ img{
   position:absolute;
   left: -100px;
 }
+
+/* work-page */
+.works-page{
+  background-color: var(--primary-bg);
+}
+.works-page .box h1{
+  color: var(--selection-nav);
+}
+.works-page .title{
+  height: 100vh;
+  font-size: 100px;
+  font-weight: 600;
+  display: grid;
+  place-items: center;
+}
+/* .works-page section:hover{
+  background-color: red;
+  height: 50vh;
+} */
