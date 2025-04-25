@@ -10,3 +10,5 @@ There are still some more features or things to add later:
 - [ ] More Styling
 
 **I'll be back to finalize this**
+
+**NO AI WERE USED WHILE DOING THIS**
