@@ -31,6 +31,7 @@ function Footer(props) {
         <footer>
             {location.pathname == "/contact" ? <div></div> : 
             <div className="top">
+                
                 <h1 style={{ fontSize: 60 + 'px', marginTop: 50 + 'px', marginBottom: 10 + 'px', letterSpacing: 3 + 'px' }}>Let's work together</h1>
                 <p>Let's work together to build something great.</p>
                 <div className="contact">

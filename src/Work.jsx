@@ -9,7 +9,7 @@ function Work(){
                     My Works
                 </div>
                 <Section h={35} image={amiibo} txt="Amiibo Mobile App" txt3="VIEW PROJECT &#10230;" link="https://github.com/CarrotRP/amiibo_api_flutter.git"/>
-                <Section h={35} txt="ayo"/>
+                <Section h={35} txt="only 1 for now 🗿"/>
         </div>
     );
 }

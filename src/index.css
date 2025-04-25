@@ -14,8 +14,6 @@
 }
 .darkmode{
   /* dark mode colors */
-  -webkit-transition: background-color 1s;
-  transition: background-color 0.5;
   --primary-bg: #181A1B;
   --secondary-bg: #1B1E1F;
   --txt-color: #C6C1B9;
@@ -248,7 +246,28 @@ img{
   display: grid;
   place-items: center;
 }
-/* .works-page section:hover{
-  background-color: red;
-  height: 50vh;
-} */
+
+/* scroll to top btn */
+.to-top-hidden{
+  position:fixed;
+  right: 8vh;
+  bottom: 15vh;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  background-color: transparent;
+  border: none;
+  color: var(--placeholder);
+
+  cursor: pointer;
+
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 100ms, opacity 100ms linear;
+
+  transform: rotate(90deg);
+}
+.to-top{
+  visibility: visible;
+  opacity: 1;
+}

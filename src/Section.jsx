@@ -6,6 +6,11 @@ function Section(props) {
     const imageRef = useRef(null);
     const boxRef = useRef(null);
 
+    const imgStyle = {
+        visibility: "hidden",
+        opacity: 0,
+    }
+
     const handleMouseOver = () => {
         //only solution i can find without displaying any error
         if(props.type != 1){
@@ -37,7 +42,7 @@ function Section(props) {
                     <p style={{ marginBottom: 40 + 'px', lineHeight: 25 + 'px' }}>{props.txt2}</p>
                     <a href={props.link} target="_blank" style={{textDecoration: 'none'}}>{props.txt3}</a>
                 </div>
-                <img ref={imageRef} src={props.image} alt="profile" className='profileImg' onMouseOver={handleMouseOver} style={{visibility: "hidden", opacity: 0}}/>
+                <img ref={imageRef} src={props.image} alt="profile" className='profileImg' onMouseOver={handleMouseOver} style={props.type == 1 ? null : imgStyle}/>
             </div>
         </section>
     );
