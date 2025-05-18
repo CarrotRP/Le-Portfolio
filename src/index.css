@@ -1,273 +1,66 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-:root{
+/* import media query */
+@import url('mQuery.css');
+
+:root {
   /* light mode colors */
+
+  /* main content bg */
   --primary-bg: white;
   --secondary-bg: #f9f9f9;
+
   --txt-color: #363636;
+  /* all text color */
+
+  /* foot-bg and footer-txt used in contact page only 🗿 */
   --footer-bg: white;
   --footer-txt: #363636;
 
-  --selection-nav: black; /* navbar text selection color*/
-  --work-page: #C6C6C6;
+  --selection-nav: black;
+  /* navbar text selection color*/
 
   --placeholder: #c6c6c6;
+  /* input place holder color*/
 }
-.darkmode{
+
+.darkmode {
   /* dark mode colors */
+
+  /* main content bg */
   --primary-bg: #181A1B;
   --secondary-bg: #1B1E1F;
+
   --txt-color: #C6C1B9;
+  /* all text color */
+
+  /* foot-bg and footer-txt used in contact page only 🗿 */
   --footer-bg: black;
   --footer-txt: white;
 
-  --selection-nav: white; /* navbar text selection color*/
-  --work-page: #363636;
-  
+  --selection-nav: white;
+  /* navbar text selection color*/
+
   --placeholder: #a1a1a1;
+  /* input place holder color*/
 }
-*{
+
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: 'Roboto';
   color: var(--txt-color);
 }
-/* navbar */
-nav{
-  display: flex;
-  gap: 50px;
-  padding: 20px 100px;
-  align-items: center;
-  justify-content: end;
-  position:absolute;
-  top: 0;
-  right:0;
-}
-nav a{
-  font-weight: bold;
-  text-decoration: none;
-  font-size: 16px;
-}
-nav span.active{
-  color: var(--selection-nav);
-  display: inline-block;
-  position: relative;
-}
-/* from stack overflow, dot under text */
-nav span.active::before{
-  content: '.';
-  display: inline-block;
-  position:absolute;
-  bottom: -0.5em;
-  left: 0;
-  text-align: center;
-  width: 100%;
-  font-size: 40px;
-}
-nav button{
-  border:none;
-  background-color: transparent;
-}
-nav svg:hover{
-  fill: grey;
-  cursor: pointer;
-}
-/* HOME */
-section{
+
+/* section css */
+section {
   height: 100vh;
 }
-section .box{
-  max-width: 1300px;
-  margin: 0 auto;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+
+section:nth-child(2n-1) {
+  background-color: var(--primary-bg);
 }
-/* home section color */
-section:nth-child(2n-1){
+
+section:nth-child(2n) {
   background-color: var(--secondary-bg);
-}
-section:nth-child(2n){
-  background-color: var(--primary-bg);
-}
-/* about section color */
-.about section:nth-child(2n-1){
-  background-color: var(--primary-bg);
-}
-.about section:nth-child(2n){
-  background-color: var(--secondary-bg);
-}
-.profileImg{
-  clip-path: circle();
-  height: 400px;
-  width: 400px;
-  object-fit: cover;
-  overflow: hidden;
-}
-/* about section */
-section .ab-box{
-  max-width: 1300px;
-  margin: 0 auto;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
-
-/* contact page */
-/* trying grid */
-.contact-page{
-  height: 85vh;
-  display: grid;
-  place-items: center;
-  background-color: var(--primary-bg);
-}
-.contact-page .box{
-  width: 55vw;
-  display: grid;
-  grid-template-rows: 80px 70px 390px
-}
-form{
-  align-self: end;
-  display: flex;
-  flex-direction: column;
-}
-.contact-page form button{
-  align-self: end;
-}
-input, textarea{
-  margin: 4px 0;
-  padding: 15px 10px;
-  border: none;
-  background-color: var(--primary-bg);
-  box-shadow: 0 1px 0px var(--placeholder);
-  font-weight: 500; 
-}
-.contact-page ::placeholder{
-  color: var(--placeholder);
-}
-textarea{
-  resize: none;
-  width: 100%;
-}
-.contact-page button{
-  border: none;
-  background-color: transparent;
-  font-weight: 700;
-  font-size: 14px;
-}
-/* contact-page text area max length indicator */
-.contact-page .txt-area p{
-  /* font-family: 'Roboto'; */
-  font-size: 12px;
-  font-weight: 400;
-  color: var(--placeholder);
-  position: absolute;
-  right: 20px;
-  bottom: 20px;
-}
-
-/* footer */
-footer{
-  background-color: black;
-}
-footer p, footer a, footer h1, footer h4{
-  color: white;
-  text-decoration: none;
-}
-/* footer top */
-footer .top{
-  display: flex;
-  flex-direction: column;
-  padding: 30px 150px;
-}
-.contact{
-  margin-top: 35px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.contact .links{
-  max-width: 160px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  font-size: 13px;
-}
-/* footer bot */
-footer .bot{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  height: 100px;
-}
-img{
-  width: 25px;
-}
-
-/* about section list, testing grid display */
-.about-list{
-  display: grid;
-  /* looks better with repeat(2, 45px or 1fr) but with this for now  */
-  /* also dont know how to 7 items per row while having dynamic item counts */
-  grid-template-rows: repeat(2, 45px);
-  grid-auto-flow: column;
-  grid-auto-rows: 1fr;
-}
-/* could make it into marquee l8tr */
-.about-mid{
-  position:relative;
-  width: 140vw;
-  padding: 40px 0;
-  overflow: hidden;
-}
-.about-mid h1{
-  color: black;
-  /* text stroke, just text shadow the 4 corner... cuz the webkit one is shit */
-  text-shadow: -1px -1px 0 #C6C1B9, 1px -1px 0 #C6C1B9, -1px 1px 0 #C6C1B9, 1px 1px 0 #C6C1B9;
-  font-size: 100px;
-  position:absolute;
-  left: -100px;
-}
-
-/* work-page */
-.works-page{
-  background-color: var(--primary-bg);
-}
-.works-page .box h1{
-  color: var(--selection-nav);
-}
-.works-page .title{
-  height: 100vh;
-  font-size: 100px;
-  font-weight: 600;
-  display: grid;
-  place-items: center;
-}
-
-/* scroll to top btn */
-.to-top-hidden{
-  position:fixed;
-  right: 8vh;
-  bottom: 15vh;
-  font-size: 16px;
-  font-weight: 500;
-  letter-spacing: 3px;
-  background-color: transparent;
-  border: none;
-  color: var(--placeholder);
-
-  cursor: pointer;
-
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 100ms, opacity 100ms linear;
-
-  transform: rotate(90deg);
-}
-.to-top{
-  visibility: visible;
-  opacity: 1;
 }

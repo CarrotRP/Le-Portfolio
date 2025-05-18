@@ -38,11 +38,11 @@ function Section(props) {
             <div className="box" ref={props.type == 1 ? null : boxRef}>
                 {/* if props image, no max width */}
                 <div className="content" style={{ maxWidth: props.image ? 400 + 'px' : '' }}>
-                    <h1 style={{ fontSize: 45 + 'px', marginBottom: 20 + 'px', lineHeight: 70 + 'px' }}>{props.txt}</h1>
-                    <p style={{ marginBottom: 40 + 'px', lineHeight: 25 + 'px' }}>{props.txt2}</p>
+                    <h1>{props.txt}</h1>
+                    { props.txt2 ? <p style={{ marginBottom: props.txt3 ? 40 + 'px' : 0, lineHeight: 25 + 'px' }}>{props.txt2}</p> : ''}
                     <a href={props.link} target="_blank" style={{textDecoration: 'none'}}>{props.txt3}</a>
                 </div>
-                <img ref={imageRef} src={props.image} alt="profile" className='profileImg' onMouseOver={handleMouseOver} style={props.type == 1 ? null : imgStyle}/>
+                {props.image ? <img ref={imageRef} src={props.image} alt="profile" className='profileImg' onMouseOver={handleMouseOver} style={props.type == 1 ? null : imgStyle}/> : ''}
             </div>
         </section>
     );

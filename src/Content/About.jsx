@@ -1,6 +1,7 @@
-import SkillSection from "./SkillSection";
-import AboutSection from "./AboutSection";
-import List from "./List";
+import SkillSection from "../Section/SkillSection";
+import AboutSection from "../Section/AboutSection";
+import List from "../Component/List";
+import './About.css'
 
 function About(){
 

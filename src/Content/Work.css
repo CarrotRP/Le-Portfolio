@@ -1,0 +1,16 @@
+/* work-page */
+.works-page {
+  background-color: var(--primary-bg);
+}
+
+.works-page .box h1 {
+  color: var(--selection-nav);
+}
+
+.works-page .title {
+  height: 100vh;
+  font-size: 100px;
+  font-weight: 600;
+  display: grid;
+  place-items: center;
+}

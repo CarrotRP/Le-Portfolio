@@ -1,0 +1,65 @@
+/* navbar */
+nav {
+  display: flex;
+  gap: 50px;
+  padding: 20px 100px;
+  align-items: center;
+  justify-content: end;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 50px;
+}
+
+nav a {
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+nav span.active {
+  color: var(--selection-nav);
+  display: inline-block;
+  position: relative;
+}
+
+/* from stack overflow, dot under text */
+nav span.active::before {
+  content: '.';
+  display: inline-block;
+  position: absolute;
+  bottom: -0.5em;
+  left: 0;
+  text-align: center;
+  width: 100%;
+  font-size: 40px;
+}
+
+nav button {
+  border: none;
+  background-color: transparent;
+}
+
+nav svg:hover {
+  fill: grey;
+  cursor: pointer;
+}
+
+/* hamburger */
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--txt-color);
+}

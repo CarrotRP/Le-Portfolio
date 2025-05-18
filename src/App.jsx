@@ -1,10 +1,10 @@
-import Navbar from "./Navbar"
-import Home from "./Home"
-import Footer from "./Footer"
-import About from "./About"
-import Work from "./Work"
-import Contact from "./Contact"
-import ScrollTop from "./ScrollTop"
+import Navbar from "./Component/Navbar"
+import Home from "./Content/Home"
+import Footer from "./Component/Footer"
+import About from "./Content/About"
+import Work from "./Content/Work"
+import Contact from "./Content/Contact"
+import ScrollTop from "./Component/ScrollTop"
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
 import { useState, useEffect} from "react"
@@ -19,6 +19,7 @@ function App() {
     document.body.classList.toggle('darkmode')
     setIsDark(!isDark);
   }
+
   const handleClick = () => {
     window.scrollTo({top: 0, behavior: "smooth"});
   }

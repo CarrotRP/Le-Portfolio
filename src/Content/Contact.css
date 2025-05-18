@@ -1,0 +1,62 @@
+/* contact page */
+/* trying grid */
+.contact-page {
+  height: 85vh;
+  display: grid;
+  place-items: center;
+  background-color: var(--primary-bg);
+}
+
+.contact-page .box {
+  width: 55vw;
+  margin-top: 65px;
+  display: grid;
+  grid-template-rows: 80px 70px 390px
+}
+
+form {
+  align-self: end;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-page form button {
+  align-self: end;
+}
+
+input,
+textarea {
+  margin: 4px 0;
+  padding: 15px 10px;
+  border: none;
+  background-color: var(--primary-bg);
+  box-shadow: 0 1px 0px var(--placeholder);
+  font-weight: 500;
+  outline: none;
+}
+
+.contact-page ::placeholder {
+  color: var(--placeholder);
+}
+
+textarea {
+  resize: none;
+  width: 100%;
+}
+
+.contact-page button {
+  border: none;
+  background-color: transparent;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+/* contact-page text area max length indicator */
+.contact-page .txt-area p {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--placeholder);
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+}

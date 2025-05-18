@@ -1,0 +1,23 @@
+/* scroll to top btn */
+.to-top-hidden {
+  position: fixed;
+  right: 8vh;
+  bottom: 15vh;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  background-color: transparent;
+  border: none;
+  color: var(--placeholder);
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 100ms, opacity 100ms linear;
+
+  transform: rotate(90deg);
+}
+
+.to-top {
+  visibility: visible;
+  opacity: 1;
+}

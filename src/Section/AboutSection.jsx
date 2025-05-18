@@ -1,4 +1,5 @@
-import profileImg from "./assets/carrot.jpg";
+import profileImg from "../assets/carrot.jpg";
+import './AboutSection.css';
 
 function AboutSection() {
     const style = {
@@ -10,7 +11,7 @@ function AboutSection() {
     return (
         <section style={{ height: 1300 + 'px' }}>
             <div className="ab-box" style={style}>
-                <p style={{
+                <p className="top" style={{
                     gridArea: "1/2/2/6",
                     fontSize: "40px",
                     alignSelf: "end",
@@ -25,7 +26,7 @@ function AboutSection() {
                     gridArea: "2/1/3/3",
                     alignSelf: "end",
                 }}/>
-                <p style={{
+                <p className="bot" style={{
                     gridArea: "3/5/4/9",
                     fontSize: "20px",
                     lineHeight: "55px",

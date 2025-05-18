@@ -1,0 +1,9 @@
+/* home section color */
+section .ab-box {
+  max-width: 1300px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}

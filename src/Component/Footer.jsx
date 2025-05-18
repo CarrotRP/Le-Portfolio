@@ -1,9 +1,10 @@
-import github_light from "./assets/github-mark-white.png"
-import tele_light from "./assets/tele-white.png"
+import github_light from "../assets/github-mark-white.png"
+import tele_light from "../assets/tele-white.png"
 import { Link, useLocation } from "react-router-dom"
+import './Footer.css'
 
-import tele_dark from "./assets/tele-dark.png"
-import github_dark from "./assets/github-mark.png"
+import tele_dark from "../assets/tele-dark.png"
+import github_dark from "../assets/github-mark.png"
 
 function Footer(props) {
 
@@ -44,7 +45,7 @@ function Footer(props) {
                     </div>
                 </div>
             </div>}
-            <div className="bot" style={location.pathname == "/contact" ? in_contact_page_style : footerBot_style}>
+            <div className={location.pathname == "/contact" ? "bot" : "bot footer-bot"} style={location.pathname == "/contact" ? in_contact_page_style : footerBot_style}>
                 <p style={location.pathname == "/contact" ? in_contact_p_style : footerBot_p_style}>&copy; CarrotS {new Date().getFullYear()}</p>
                 <p style={location.pathname == "/contact" ? in_contact_p_style : footerBot_p_style}>|</p>
                 {/* testing a tag and Link from react-router */}

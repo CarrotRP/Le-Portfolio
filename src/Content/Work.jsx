@@ -1,5 +1,6 @@
-import Section from "./Section";
-import amiibo from "./assets/amiibo.png"
+import Section from "../Section/Section";
+import amiibo from "../assets/amiibo.png";
+import './Work.css';
 
 function Work(){
     return(

@@ -1,6 +1,6 @@
-import Section from './Section';
-
-import profileImg from './assets/carrot.jpg'
+import Section from '../Section/Section';
+import profileImg from '../assets/carrot.jpg'
+import './Home.css'
 
 function Home() {
     return (

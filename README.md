@@ -1,10 +1,12 @@
 # A React Project
 
+Demo link [Le-Portfolio](https://le-portfolio-lilac.vercel.app)
+
 ## Just some little portfolio for practice
 
 There are still some more features or things to add later:
 
-- [ ] Media Query
+- [x] Media Query
 - [ ] More Animation
 - [ ] Functional Contact
 - [ ] More Styling

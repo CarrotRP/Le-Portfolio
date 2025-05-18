@@ -1,3 +1,5 @@
+import './ScrollTop.css'
+
 function ScrollTop(props) {
 
     return (

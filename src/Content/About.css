@@ -1,0 +1,26 @@
+/* about section list, testing grid display */
+.about-list {
+  display: grid;
+  /* looks better with repeat(2, 45px or 1fr) but with this for now  */
+  /* also dont know how to 7 items per row while having dynamic item counts */
+  grid-template-rows: repeat(2, 45px);
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+}
+
+/* could make it into marquee l8tr */
+.about-mid {
+  position: relative;
+  width: 140vw;
+  padding: 40px 0;
+  overflow: hidden;
+}
+
+.about-mid h1 {
+  color: black;
+  /* text stroke, just text shadow the 4 corner... cuz the webkit one is bad */
+  text-shadow: -1px -1px 0 #C6C1B9, 1px -1px 0 #C6C1B9, -1px 1px 0 #C6C1B9, 1px 1px 0 #C6C1B9;
+  font-size: 100px;
+  position: absolute;
+  left: -100px;
+}

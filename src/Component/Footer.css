@@ -1,0 +1,47 @@
+/* footer */
+footer {
+  background-color: black;
+}
+
+footer p,
+footer a,
+footer h1,
+footer h4 {
+  color: white;
+  text-decoration: none;
+}
+
+/* footer top */
+footer .top {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 150px;
+}
+
+.contact {
+  margin-top: 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact .links {
+  max-width: 160px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 13px;
+}
+
+/* footer bot */
+footer .bot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  height: 100px;
+}
+
+img {
+  width: 25px;
+}
