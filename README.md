@@ -1,6 +1,6 @@
 # A React Project
 
-Demo link [Le-Portfolio](https://le-portfolio-lilac.vercel.app)
+Demo link [Le-Portfolio](https://carrotrp.github.io/Le-Portfolio/)
 
 ## Just some little portfolio for practice
 
@@ -12,5 +12,3 @@ There are still some more features or things to add later:
 - [ ] More Styling
 
 **I'll be back to finalize this**
-
-**NO AI WERE USED WHILE DOING THIS**

@@ -15,7 +15,6 @@ function Navbar(props) {
         navMenuRef.current.classList.toggle('active');
     }
     const handleMenuClick = (e) => {
-        console.log(e)
         if(e.target.matches('a') || e.target.matches('span')){
             hamburgerRef.current.classList.remove('active')
             navMenuRef.current.classList.remove('active');

@@ -21,7 +21,7 @@ form {
 }
 
 .contact-page form button {
-  align-self: end;
+  align-self: flex-end;
 }
 
 input,

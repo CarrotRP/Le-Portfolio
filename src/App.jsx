@@ -37,10 +37,9 @@ function App() {
   }, []);
 
   return (
-    <Router>
+    <Router basename={`/${import.meta.env.BASE_URL}`}>
       <Navbar isDark={isDark} toggleMode={toggleMode} />
       <Routes>
-        <Route path="/" element={<Home />}></Route>
         <Route path="/" element={<Home />}></Route>
         <Route path="/about" element={<About />}></Route>
         <Route path="/works" element={<Work />}></Route>
